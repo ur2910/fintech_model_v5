@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Kid-friendly animations and styles */
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(147, 51, 234, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(147, 51, 234, 0.6); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Custom utility classes for kids */
+.bounce-gentle {
+  animation: bounce-gentle 2s infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+.wiggle {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Enhanced button hover effects */
+.btn-kid-friendly {
+  @apply transition-all duration-300 transform hover:scale-105 active:scale-95;
+}
+
+.btn-kid-friendly:hover {
+  @apply shadow-xl;
+}
+
+/* Custom scrollbar for kids */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #8b5cf6, #ec4899);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #7c3aed, #db2777);
+}
+
+/* Text selection styling */
+::selection {
+  background: #fbbf24;
+  color: #1f2937;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+textarea:focus-visible {
+  @apply outline-none ring-4 ring-purple-300 ring-opacity-50;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom gradient backgrounds */
+.bg-gradient-kid {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-gradient-warm {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.bg-gradient-cool {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
